@@ -1,0 +1,833 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		699727DF1F11B85F009CCC8D /* LoginModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699727DE1F11B85F009CCC8D /* LoginModuleInterface.swift */; };
+		6FA50C8C76F77EB567F7EF3C /* Pods_LoginViper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C20C19A4D02AA3D12888DE0 /* Pods_LoginViper.framework */; };
+		7D1E46D31F1030AD00416A44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1E46D21F1030AD00416A44 /* AppDelegate.swift */; };
+		7D1E46D81F1030AD00416A44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D1E46D61F1030AD00416A44 /* Main.storyboard */; };
+		7D1E46DA1F1030AD00416A44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D1E46D91F1030AD00416A44 /* Assets.xcassets */; };
+		7D1E46DD1F1030AD00416A44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D1E46DB1F1030AD00416A44 /* LaunchScreen.storyboard */; };
+		7D1E46E81F1030AD00416A44 /* LoginViperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1E46E71F1030AD00416A44 /* LoginViperTests.swift */; };
+		7D1E46F31F1030AD00416A44 /* LoginViperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1E46F21F1030AD00416A44 /* LoginViperUITests.swift */; };
+		7D1E47051F10314D00416A44 /* LoginUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1E47041F10314D00416A44 /* LoginUserViewController.swift */; };
+		7D1E47081F10318200416A44 /* LoginWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1E47071F10318200416A44 /* LoginWireframe.swift */; };
+		7D1E470C1F10320700416A44 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1E470B1F10320700416A44 /* LoginInteractor.swift */; };
+		7D1E470E1F10321500416A44 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1E470D1F10321500416A44 /* LoginPresenter.swift */; };
+		7D46BA9B1F13C9F500C01704 /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46BA9A1F13C9F500C01704 /* Help.swift */; };
+		7D46BAA01F13D10E00C01704 /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46BA9F1F13D10E00C01704 /* LoginAPI.swift */; };
+		7D46BAA21F13D16400C01704 /* LoginUserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46BAA11F13D16400C01704 /* LoginUserAPI.swift */; };
+		7D46BAAA1F13F1BF00C01704 /* PerfilUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46BAA91F13F1BF00C01704 /* PerfilUserViewController.swift */; };
+		7D46BAAC1F13F6B800C01704 /* PerfilWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46BAAB1F13F6B800C01704 /* PerfilWireframe.swift */; };
+		7D46BAAE1F13F71600C01704 /* PerfilPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46BAAD1F13F71600C01704 /* PerfilPresenter.swift */; };
+		7D46BAB01F13F73900C01704 /* PerfilInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46BAAF1F13F73900C01704 /* PerfilInteractor.swift */; };
+		7D46BAB21F13F75900C01704 /* PerfilModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46BAB11F13F75900C01704 /* PerfilModuleInterface.swift */; };
+		7D46BAB41F14080400C01704 /* ValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46BAB31F14080400C01704 /* ValidationResult.swift */; };
+		7D46BAB61F14177200C01704 /* LoginUserDetailAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46BAB51F14177200C01704 /* LoginUserDetailAPI.swift */; };
+		7D46BAB81F1427F100C01704 /* LoginUserMapAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46BAB71F1427F100C01704 /* LoginUserMapAPI.swift */; };
+		7D97B2161F15414C008EA24F /* UserAnnotiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97B2151F15414C008EA24F /* UserAnnotiation.swift */; };
+		7D97B2191F15447E008EA24F /* LoginUserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97B2181F15447E008EA24F /* LoginUserDataManager.swift */; };
+		7D97B21C1F154BFD008EA24F /* PerfilUserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97B21B1F154BFD008EA24F /* PerfilUserDataManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7D1E46E41F1030AD00416A44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D1E46C71F1030AD00416A44 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D1E46CE1F1030AD00416A44;
+			remoteInfo = LoginViper;
+		};
+		7D1E46EF1F1030AD00416A44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D1E46C71F1030AD00416A44 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D1E46CE1F1030AD00416A44;
+			remoteInfo = LoginViper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4C20C19A4D02AA3D12888DE0 /* Pods_LoginViper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginViper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67D6EC336AD73FEF1E09386C /* Pods-LoginViper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginViper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoginViper/Pods-LoginViper.debug.xcconfig"; sourceTree = "<group>"; };
+		699727DE1F11B85F009CCC8D /* LoginModuleInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModuleInterface.swift; sourceTree = "<group>"; };
+		7D1E46CF1F1030AD00416A44 /* LoginViper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginViper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D1E46D21F1030AD00416A44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7D1E46D71F1030AD00416A44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7D1E46D91F1030AD00416A44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D1E46DC1F1030AD00416A44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7D1E46DE1F1030AD00416A44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D1E46E31F1030AD00416A44 /* LoginViperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginViperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D1E46E71F1030AD00416A44 /* LoginViperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViperTests.swift; sourceTree = "<group>"; };
+		7D1E46E91F1030AD00416A44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D1E46EE1F1030AD00416A44 /* LoginViperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginViperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D1E46F21F1030AD00416A44 /* LoginViperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViperUITests.swift; sourceTree = "<group>"; };
+		7D1E46F41F1030AD00416A44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D1E47041F10314D00416A44 /* LoginUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUserViewController.swift; sourceTree = "<group>"; };
+		7D1E47071F10318200416A44 /* LoginWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWireframe.swift; sourceTree = "<group>"; };
+		7D1E470B1F10320700416A44 /* LoginInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		7D1E470D1F10321500416A44 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		7D46BA9A1F13C9F500C01704 /* Help.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
+		7D46BA9F1F13D10E00C01704 /* LoginAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
+		7D46BAA11F13D16400C01704 /* LoginUserAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUserAPI.swift; sourceTree = "<group>"; };
+		7D46BAA91F13F1BF00C01704 /* PerfilUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilUserViewController.swift; sourceTree = "<group>"; };
+		7D46BAAB1F13F6B800C01704 /* PerfilWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilWireframe.swift; sourceTree = "<group>"; };
+		7D46BAAD1F13F71600C01704 /* PerfilPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilPresenter.swift; sourceTree = "<group>"; };
+		7D46BAAF1F13F73900C01704 /* PerfilInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilInteractor.swift; sourceTree = "<group>"; };
+		7D46BAB11F13F75900C01704 /* PerfilModuleInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilModuleInterface.swift; sourceTree = "<group>"; };
+		7D46BAB31F14080400C01704 /* ValidationResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationResult.swift; sourceTree = "<group>"; };
+		7D46BAB51F14177200C01704 /* LoginUserDetailAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUserDetailAPI.swift; sourceTree = "<group>"; };
+		7D46BAB71F1427F100C01704 /* LoginUserMapAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUserMapAPI.swift; sourceTree = "<group>"; };
+		7D97B2151F15414C008EA24F /* UserAnnotiation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAnnotiation.swift; sourceTree = "<group>"; };
+		7D97B2181F15447E008EA24F /* LoginUserDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUserDataManager.swift; sourceTree = "<group>"; };
+		7D97B21B1F154BFD008EA24F /* PerfilUserDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilUserDataManager.swift; sourceTree = "<group>"; };
+		D5B92D26E59349B31826A269 /* Pods-LoginViper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginViper.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoginViper/Pods-LoginViper.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7D1E46CC1F1030AD00416A44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FA50C8C76F77EB567F7EF3C /* Pods_LoginViper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D1E46E01F1030AD00416A44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D1E46EB1F1030AD00416A44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		47E50DD36D566DFF992A63EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C20C19A4D02AA3D12888DE0 /* Pods_LoginViper.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		699727DD1F11B831009CCC8D /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				699727DE1F11B85F009CCC8D /* LoginModuleInterface.swift */,
+			);
+			name = Interface;
+			sourceTree = "<group>";
+		};
+		6A9E0F04E78F28DC7DD094C2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				67D6EC336AD73FEF1E09386C /* Pods-LoginViper.debug.xcconfig */,
+				D5B92D26E59349B31826A269 /* Pods-LoginViper.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7D1E46C61F1030AD00416A44 = {
+			isa = PBXGroup;
+			children = (
+				7D46BA9C1F13D0BB00C01704 /* Common */,
+				7D46BA991F13C9E100C01704 /* Help */,
+				7D1E46D11F1030AD00416A44 /* LoginViper */,
+				7D1E46E61F1030AD00416A44 /* LoginViperTests */,
+				7D1E46F11F1030AD00416A44 /* LoginViperUITests */,
+				7D1E46D01F1030AD00416A44 /* Products */,
+				6A9E0F04E78F28DC7DD094C2 /* Pods */,
+				47E50DD36D566DFF992A63EA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7D1E46D01F1030AD00416A44 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D1E46CF1F1030AD00416A44 /* LoginViper.app */,
+				7D1E46E31F1030AD00416A44 /* LoginViperTests.xctest */,
+				7D1E46EE1F1030AD00416A44 /* LoginViperUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7D1E46D11F1030AD00416A44 /* LoginViper */ = {
+			isa = PBXGroup;
+			children = (
+				7D1E47001F1030BD00416A44 /* Modules */,
+				7D1E46D21F1030AD00416A44 /* AppDelegate.swift */,
+				7D1E46D61F1030AD00416A44 /* Main.storyboard */,
+				7D1E46D91F1030AD00416A44 /* Assets.xcassets */,
+				7D1E46DB1F1030AD00416A44 /* LaunchScreen.storyboard */,
+				7D1E46DE1F1030AD00416A44 /* Info.plist */,
+			);
+			path = LoginViper;
+			sourceTree = "<group>";
+		};
+		7D1E46E61F1030AD00416A44 /* LoginViperTests */ = {
+			isa = PBXGroup;
+			children = (
+				7D1E46E71F1030AD00416A44 /* LoginViperTests.swift */,
+				7D1E46E91F1030AD00416A44 /* Info.plist */,
+			);
+			path = LoginViperTests;
+			sourceTree = "<group>";
+		};
+		7D1E46F11F1030AD00416A44 /* LoginViperUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7D1E46F21F1030AD00416A44 /* LoginViperUITests.swift */,
+				7D1E46F41F1030AD00416A44 /* Info.plist */,
+			);
+			path = LoginViperUITests;
+			sourceTree = "<group>";
+		};
+		7D1E47001F1030BD00416A44 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				7D1E47021F1030FF00416A44 /* LoginUser */,
+				7D46BAA31F13F13200C01704 /* PerfilUser */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		7D1E47011F1030C600416A44 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7D1E47041F10314D00416A44 /* LoginUserViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7D1E47021F1030FF00416A44 /* LoginUser */ = {
+			isa = PBXGroup;
+			children = (
+				7D97B2171F154449008EA24F /* DataManager */,
+				699727DD1F11B831009CCC8D /* Interface */,
+				7D1E470A1F1031CB00416A44 /* Interactor */,
+				7D1E47091F1031C100416A44 /* Presenter */,
+				7D1E47011F1030C600416A44 /* View */,
+				7D1E47061F10315700416A44 /* Wireframe */,
+			);
+			name = LoginUser;
+			sourceTree = "<group>";
+		};
+		7D1E47061F10315700416A44 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				7D1E47071F10318200416A44 /* LoginWireframe.swift */,
+			);
+			name = Wireframe;
+			sourceTree = "<group>";
+		};
+		7D1E47091F1031C100416A44 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				7D1E470D1F10321500416A44 /* LoginPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		7D1E470A1F1031CB00416A44 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				7D1E470B1F10320700416A44 /* LoginInteractor.swift */,
+				7D46BAB31F14080400C01704 /* ValidationResult.swift */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		7D46BA991F13C9E100C01704 /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				7D46BA9A1F13C9F500C01704 /* Help.swift */,
+			);
+			name = Help;
+			sourceTree = "<group>";
+		};
+		7D46BA9C1F13D0BB00C01704 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7D46BA9D1F13D0E700C01704 /* LoginAPI */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		7D46BA9D1F13D0E700C01704 /* LoginAPI */ = {
+			isa = PBXGroup;
+			children = (
+				7D46BA9E1F13D0FE00C01704 /* Entities */,
+				7D46BA9F1F13D10E00C01704 /* LoginAPI.swift */,
+			);
+			name = LoginAPI;
+			sourceTree = "<group>";
+		};
+		7D46BA9E1F13D0FE00C01704 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				7D46BAA11F13D16400C01704 /* LoginUserAPI.swift */,
+				7D46BAB51F14177200C01704 /* LoginUserDetailAPI.swift */,
+				7D46BAB71F1427F100C01704 /* LoginUserMapAPI.swift */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		7D46BAA31F13F13200C01704 /* PerfilUser */ = {
+			isa = PBXGroup;
+			children = (
+				7D97B21A1F154BE3008EA24F /* DataManager */,
+				7D46BAA41F13F14600C01704 /* Interface */,
+				7D46BAA51F13F17700C01704 /* Interactor */,
+				7D46BAA61F13F17F00C01704 /* Presenter */,
+				7D46BAA71F13F18700C01704 /* View */,
+				7D46BAA81F13F18D00C01704 /* Wireframe */,
+			);
+			name = PerfilUser;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		7D46BAA41F13F14600C01704 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				7D46BAB11F13F75900C01704 /* PerfilModuleInterface.swift */,
+			);
+			name = Interface;
+			sourceTree = "<group>";
+		};
+		7D46BAA51F13F17700C01704 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				7D46BAAF1F13F73900C01704 /* PerfilInteractor.swift */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		7D46BAA61F13F17F00C01704 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				7D46BAAD1F13F71600C01704 /* PerfilPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		7D46BAA71F13F18700C01704 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7D46BAA91F13F1BF00C01704 /* PerfilUserViewController.swift */,
+				7D97B2151F15414C008EA24F /* UserAnnotiation.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7D46BAA81F13F18D00C01704 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				7D46BAAB1F13F6B800C01704 /* PerfilWireframe.swift */,
+			);
+			name = Wireframe;
+			sourceTree = "<group>";
+		};
+		7D97B2171F154449008EA24F /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				7D97B2181F15447E008EA24F /* LoginUserDataManager.swift */,
+			);
+			name = DataManager;
+			sourceTree = "<group>";
+		};
+		7D97B21A1F154BE3008EA24F /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				7D97B21B1F154BFD008EA24F /* PerfilUserDataManager.swift */,
+			);
+			name = DataManager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7D1E46CE1F1030AD00416A44 /* LoginViper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D1E46F71F1030AD00416A44 /* Build configuration list for PBXNativeTarget "LoginViper" */;
+			buildPhases = (
+				798CE19FC9EFBD7779F0A210 /* [CP] Check Pods Manifest.lock */,
+				7D1E46CB1F1030AD00416A44 /* Sources */,
+				7D1E46CC1F1030AD00416A44 /* Frameworks */,
+				7D1E46CD1F1030AD00416A44 /* Resources */,
+				D55C489D948160539393CEE5 /* [CP] Embed Pods Frameworks */,
+				72EDECAAAB39599F2C8B9B21 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LoginViper;
+			productName = LoginViper;
+			productReference = 7D1E46CF1F1030AD00416A44 /* LoginViper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7D1E46E21F1030AD00416A44 /* LoginViperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D1E46FA1F1030AD00416A44 /* Build configuration list for PBXNativeTarget "LoginViperTests" */;
+			buildPhases = (
+				7D1E46DF1F1030AD00416A44 /* Sources */,
+				7D1E46E01F1030AD00416A44 /* Frameworks */,
+				7D1E46E11F1030AD00416A44 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D1E46E51F1030AD00416A44 /* PBXTargetDependency */,
+			);
+			name = LoginViperTests;
+			productName = LoginViperTests;
+			productReference = 7D1E46E31F1030AD00416A44 /* LoginViperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7D1E46ED1F1030AD00416A44 /* LoginViperUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D1E46FD1F1030AD00416A44 /* Build configuration list for PBXNativeTarget "LoginViperUITests" */;
+			buildPhases = (
+				7D1E46EA1F1030AD00416A44 /* Sources */,
+				7D1E46EB1F1030AD00416A44 /* Frameworks */,
+				7D1E46EC1F1030AD00416A44 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D1E46F01F1030AD00416A44 /* PBXTargetDependency */,
+			);
+			name = LoginViperUITests;
+			productName = LoginViperUITests;
+			productReference = 7D1E46EE1F1030AD00416A44 /* LoginViperUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7D1E46C71F1030AD00416A44 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Luiz Felipe Gomes";
+				TargetAttributes = {
+					7D1E46CE1F1030AD00416A44 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					7D1E46E21F1030AD00416A44 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7D1E46CE1F1030AD00416A44;
+					};
+					7D1E46ED1F1030AD00416A44 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7D1E46CE1F1030AD00416A44;
+					};
+				};
+			};
+			buildConfigurationList = 7D1E46CA1F1030AD00416A44 /* Build configuration list for PBXProject "LoginViper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7D1E46C61F1030AD00416A44;
+			productRefGroup = 7D1E46D01F1030AD00416A44 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7D1E46CE1F1030AD00416A44 /* LoginViper */,
+				7D1E46E21F1030AD00416A44 /* LoginViperTests */,
+				7D1E46ED1F1030AD00416A44 /* LoginViperUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7D1E46CD1F1030AD00416A44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D1E46DD1F1030AD00416A44 /* LaunchScreen.storyboard in Resources */,
+				7D1E46DA1F1030AD00416A44 /* Assets.xcassets in Resources */,
+				7D1E46D81F1030AD00416A44 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D1E46E11F1030AD00416A44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D1E46EC1F1030AD00416A44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72EDECAAAB39599F2C8B9B21 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoginViper/Pods-LoginViper-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		798CE19FC9EFBD7779F0A210 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D55C489D948160539393CEE5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoginViper/Pods-LoginViper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D1E46CB1F1030AD00416A44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D97B21C1F154BFD008EA24F /* PerfilUserDataManager.swift in Sources */,
+				7D46BAB81F1427F100C01704 /* LoginUserMapAPI.swift in Sources */,
+				7D46BAAC1F13F6B800C01704 /* PerfilWireframe.swift in Sources */,
+				7D46BA9B1F13C9F500C01704 /* Help.swift in Sources */,
+				7D1E470C1F10320700416A44 /* LoginInteractor.swift in Sources */,
+				7D1E46D31F1030AD00416A44 /* AppDelegate.swift in Sources */,
+				7D1E47051F10314D00416A44 /* LoginUserViewController.swift in Sources */,
+				7D46BAA01F13D10E00C01704 /* LoginAPI.swift in Sources */,
+				7D46BAAA1F13F1BF00C01704 /* PerfilUserViewController.swift in Sources */,
+				699727DF1F11B85F009CCC8D /* LoginModuleInterface.swift in Sources */,
+				7D46BAB61F14177200C01704 /* LoginUserDetailAPI.swift in Sources */,
+				7D46BAB41F14080400C01704 /* ValidationResult.swift in Sources */,
+				7D1E47081F10318200416A44 /* LoginWireframe.swift in Sources */,
+				7D46BAB21F13F75900C01704 /* PerfilModuleInterface.swift in Sources */,
+				7D97B2161F15414C008EA24F /* UserAnnotiation.swift in Sources */,
+				7D46BAA21F13D16400C01704 /* LoginUserAPI.swift in Sources */,
+				7D46BAAE1F13F71600C01704 /* PerfilPresenter.swift in Sources */,
+				7D1E470E1F10321500416A44 /* LoginPresenter.swift in Sources */,
+				7D46BAB01F13F73900C01704 /* PerfilInteractor.swift in Sources */,
+				7D97B2191F15447E008EA24F /* LoginUserDataManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D1E46DF1F1030AD00416A44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D1E46E81F1030AD00416A44 /* LoginViperTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D1E46EA1F1030AD00416A44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D1E46F31F1030AD00416A44 /* LoginViperUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7D1E46E51F1030AD00416A44 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D1E46CE1F1030AD00416A44 /* LoginViper */;
+			targetProxy = 7D1E46E41F1030AD00416A44 /* PBXContainerItemProxy */;
+		};
+		7D1E46F01F1030AD00416A44 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D1E46CE1F1030AD00416A44 /* LoginViper */;
+			targetProxy = 7D1E46EF1F1030AD00416A44 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7D1E46D61F1030AD00416A44 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D1E46D71F1030AD00416A44 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7D1E46DB1F1030AD00416A44 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D1E46DC1F1030AD00416A44 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7D1E46F51F1030AD00416A44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7D1E46F61F1030AD00416A44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7D1E46F81F1030AD00416A44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67D6EC336AD73FEF1E09386C /* Pods-LoginViper.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LoginViper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.storm.LoginViper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		7D1E46F91F1030AD00416A44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5B92D26E59349B31826A269 /* Pods-LoginViper.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LoginViper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.storm.LoginViper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		7D1E46FB1F1030AD00416A44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LoginViperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.storm.LoginViperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoginViper.app/LoginViper";
+			};
+			name = Debug;
+		};
+		7D1E46FC1F1030AD00416A44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LoginViperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.storm.LoginViperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoginViper.app/LoginViper";
+			};
+			name = Release;
+		};
+		7D1E46FE1F1030AD00416A44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = LoginViperUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.storm.LoginViperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = LoginViper;
+			};
+			name = Debug;
+		};
+		7D1E46FF1F1030AD00416A44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = LoginViperUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.storm.LoginViperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = LoginViper;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D1E46CA1F1030AD00416A44 /* Build configuration list for PBXProject "LoginViper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D1E46F51F1030AD00416A44 /* Debug */,
+				7D1E46F61F1030AD00416A44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D1E46F71F1030AD00416A44 /* Build configuration list for PBXNativeTarget "LoginViper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D1E46F81F1030AD00416A44 /* Debug */,
+				7D1E46F91F1030AD00416A44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D1E46FA1F1030AD00416A44 /* Build configuration list for PBXNativeTarget "LoginViperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D1E46FB1F1030AD00416A44 /* Debug */,
+				7D1E46FC1F1030AD00416A44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D1E46FD1F1030AD00416A44 /* Build configuration list for PBXNativeTarget "LoginViperUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D1E46FE1F1030AD00416A44 /* Debug */,
+				7D1E46FF1F1030AD00416A44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7D1E46C71F1030AD00416A44 /* Project object */;
+}
