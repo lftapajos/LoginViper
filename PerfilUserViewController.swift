@@ -79,17 +79,29 @@ extension PerfilUserViewController: PerfilPresenterOutput {
 
     func showUserLocationInMap(name: String, latitude: String, longitude: String) {
         
+        //Requisita a localizaçãop do usuário
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
         
+        //Converte a Latitude e a Longitude de String para Doble e de Doble para CLLocationDregress
         let latitudeDegrees : CLLocationDegrees = Double(latitude)!
         let longitudeDegrees : CLLocationDegrees = Double(longitude)!
         
-        let latitude:CLLocationDegrees = latitudeDegrees
-        let longitude:CLLocationDegrees = longitudeDegrees
+        //Prepara a localização do usuário pela Latitude e Longitude
+        let location = CLLocationCoordinate2DMake(latitudeDegrees, longitudeDegrees)
         
-        let location = CLLocationCoordinate2DMake(latitude, longitude)
-        let annotation = UserAnnotation(coordinate: location)
+        //Seleciona a região do Mapa pela localização do usuário
+        let span = MKCoordinateSpanMake(0.005, 0.005)
+        let region = MKCoordinateRegion(center: location, span: span)
+        self.mapView.setRegion(region, animated: true)
+        
+        //Formata Subtitle do Anntoation
+        let locationFormated = "\(latitude), \(longitude)"
+        
+        //Recebe a Annotation preparada com os Dados de apresentação
+        let annotation = UserAnnotation(coordinate: location, title: name, subtitle: locationFormated)
+        
+        //Adiciona alfinete no mapa com a localização do usuário
         self.mapView.addAnnotation(annotation)
         
     }

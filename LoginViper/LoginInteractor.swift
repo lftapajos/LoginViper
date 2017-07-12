@@ -27,7 +27,7 @@ protocol LoginInteractorOutuput {
 }
 
 //Classe Inetractor do Login
-class LoginInteractor: LoginInteractorInput {
+class LoginInteractor {
     
     //Declara o Presenter de Output do Interactor para o Presenter
     var presenter: LoginInteractorOutuput
@@ -40,29 +40,35 @@ class LoginInteractor: LoginInteractorInput {
         self.presenter = presenter
         self.dataManager = dataManager
     }
-    
+}
+
+extension LoginInteractor: LoginInteractorInput {
     //Função de Login do Interacor para o DataManager
     func login(email: String, password: String) {
         
         //Valida o E-mail
-        guard email.isEmail else {
+        //Se o E-mail é valido, segue a função
+        guard email.isValidEmail else {
+            //Senão retorna ao Presenter E-mail inválido.
             return self.presenter.loginDidFailed(codeError: .failureEmail)
         }
         
         //Valida Pasword
+        //Se a Senha é valida, segue a função
         guard password.characters.count > 3 else {
+            //Senão retorna ao Presenter Senha inválida.
             return self.presenter.loginDidFailed(codeError: .failurePassword)
         }
         
         //Faz Request por meio do DataManager(serviços)
         self.dataManager.login(email: email, password: password, successBlock: { (userLogged) in
+            //Callback de Login com sucesso
             self.presenter.loginSuccess(user: userLogged)
         }, failureBlock: {
+            //Callback de Login com falha no serviço
             self.presenter.loginDidFailed(codeError: .failureService)
         })
     }
-
-    
 }
 
 extension String {
@@ -76,7 +82,7 @@ extension String {
     }
     
     //Validate Email
-    var isEmail: Bool {
+    var isValidEmail: Bool {
         
         do {
             let regex = try NSRegularExpression(pattern: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}", options: .caseInsensitive)

@@ -28,7 +28,6 @@ class LoginUserViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         self.eventHandler?.viewDidLoad()
-        //presenter?.didTapLoginButton(email: "email@teste.com", password: "falfjalfa")
         
         self.emailTextField.delegate = self
         self.passwordTextField.delegate = self

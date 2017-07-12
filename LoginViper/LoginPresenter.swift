@@ -46,7 +46,6 @@ class LoginPresenter {
     //Cria variável de Referenecia da do Wireframe para navegação
     var wireframe: LoginWireframe?
     
-    
     var user: LoginUserDetailAPI? = nil
     
 }
@@ -59,7 +58,7 @@ extension LoginPresenter: LoginPresenterInput {
         interactor?.login(email: email, password: password)
     }
     
-    //Wirefrae cha ViewController de PerfilUser
+    //Wirefrae chama ViewController de PerfilUser
     func alertSuccessDismissed() {
         self.wireframe?.showUserDetail(user: self.user!)
     }
