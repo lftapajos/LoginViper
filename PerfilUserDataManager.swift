@@ -26,14 +26,14 @@ class PerfilUserDataManager: PerfilUserDataManagerProtocol {
             //print("Response: \(String(describing: response.response))") // http url response
             //print("Result: \(response.result)")                         // response serialization result
             
-            if let json = response.result.value as? Array<Dictionary<String,Any>> {
+            if let json = response.result.value as? Dictionary<String,Any> {
                 //print("JSON: \(json)") // serialized json response
                 //print("id ==> "json["id"][0])
-                if let jsonResult = json as? Array<Dictionary<String,String>> {
-                    let idUser = jsonResult[0]["id"]!
-                    let nameUser = jsonResult[0]["nome"]!
-                    let latitudeUser = jsonResult[0]["latitude"]!
-                    let longitudeUser = jsonResult[0]["longitude"]!
+                if let jsonResult = json as? Dictionary<String,String> {
+                    let idUser = jsonResult["id"]!
+                    let nameUser = jsonResult["nome"]!
+                    let latitudeUser = jsonResult["latitude"]!
+                    let longitudeUser = jsonResult["longitude"]!
                     
                     //Recupera dados e prepara modelo de retorno do LoginUserDetail
                     let dataSet = LoginUserMapAPI.init(id: idUser, name: nameUser, latitude: latitudeUser, longitude: longitudeUser)

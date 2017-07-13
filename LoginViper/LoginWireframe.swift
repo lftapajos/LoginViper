@@ -45,9 +45,9 @@ class LoginWireframe {
         
     }
     
-    func showUserDetail(user: LoginUserDetailAPI) {
+    func showUserDetail(user: Usuario?) {
         let detailWireframe = PerfilWireframe()
-        detailWireframe.present(user: user, in: self.window)
+        detailWireframe.present(user: user!, in: self.window)
     }
 
 }

@@ -34,9 +34,9 @@ class PerfilPresenter {
     //Cria variável de Referenecia da do Wireframe para navegação
     var wireframe: PerfilWireframe?
     
-    let user: LoginUserDetailAPI
+    let user: Usuario? //LoginUserDetailAPI
     
-    init(user: LoginUserDetailAPI) {
+    init(user: Usuario?) { //LoginUserDetailAPI
         self.user = user
     }
 }
@@ -45,14 +45,15 @@ extension PerfilPresenter: PerfilPresenterInput {
     func viewDidLoad() {
         
         //Retorna para a ViewController os dados do usuário logado
-        self.view?.showInfoUser(id: self.user.id, name: self.user.name, email: self.user.email, phone: self.user.phone, celphone: self.user.celphone, address: self.user.address)
+        self.view?.showInfoUser(id: (user?.id)!, name: (user?.name)!, email: (user?.email)!, phone: (user?.phone)!, celphone: (user?.celphone)!, address: (user?.address)!)
         
     }
     
     func didTapButtonShowMap() {
         
         //Passa para o indereactor o id do usuário
-        interactor?.getUserLocation(from: user.id)
+        //interactor?.getUserLocation(from: (user))
+        interactor?.getUserLocation(from: (user?.id)!)
     }
     
     func didTapCloseButton() {

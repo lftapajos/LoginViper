@@ -20,8 +20,6 @@
 		7D1E470C1F10320700416A44 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1E470B1F10320700416A44 /* LoginInteractor.swift */; };
 		7D1E470E1F10321500416A44 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1E470D1F10321500416A44 /* LoginPresenter.swift */; };
 		7D46BA9B1F13C9F500C01704 /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46BA9A1F13C9F500C01704 /* Help.swift */; };
-		7D46BAA01F13D10E00C01704 /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46BA9F1F13D10E00C01704 /* LoginAPI.swift */; };
-		7D46BAA21F13D16400C01704 /* LoginUserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46BAA11F13D16400C01704 /* LoginUserAPI.swift */; };
 		7D46BAAA1F13F1BF00C01704 /* PerfilUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46BAA91F13F1BF00C01704 /* PerfilUserViewController.swift */; };
 		7D46BAAC1F13F6B800C01704 /* PerfilWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46BAAB1F13F6B800C01704 /* PerfilWireframe.swift */; };
 		7D46BAAE1F13F71600C01704 /* PerfilPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46BAAD1F13F71600C01704 /* PerfilPresenter.swift */; };
@@ -33,6 +31,10 @@
 		7D97B2161F15414C008EA24F /* UserAnnotiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97B2151F15414C008EA24F /* UserAnnotiation.swift */; };
 		7D97B2191F15447E008EA24F /* LoginUserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97B2181F15447E008EA24F /* LoginUserDataManager.swift */; };
 		7D97B21C1F154BFD008EA24F /* PerfilUserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97B21B1F154BFD008EA24F /* PerfilUserDataManager.swift */; };
+		7D97B2301F16B1EA008EA24F /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97B22F1F16B1EA008EA24F /* Usuario.swift */; };
+		7D97B2331F16B420008EA24F /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97B2321F16B420008EA24F /* LoginAPI.swift */; };
+		7D97B2361F16B52C008EA24F /* UserLoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97B2351F16B52C008EA24F /* UserLoginAPI.swift */; };
+		7D97B2381F17AF5A008EA24F /* LoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97B2371F17AF5A008EA24F /* LoginDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,8 +75,6 @@
 		7D1E470B1F10320700416A44 /* LoginInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		7D1E470D1F10321500416A44 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		7D46BA9A1F13C9F500C01704 /* Help.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
-		7D46BA9F1F13D10E00C01704 /* LoginAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
-		7D46BAA11F13D16400C01704 /* LoginUserAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUserAPI.swift; sourceTree = "<group>"; };
 		7D46BAA91F13F1BF00C01704 /* PerfilUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilUserViewController.swift; sourceTree = "<group>"; };
 		7D46BAAB1F13F6B800C01704 /* PerfilWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilWireframe.swift; sourceTree = "<group>"; };
 		7D46BAAD1F13F71600C01704 /* PerfilPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilPresenter.swift; sourceTree = "<group>"; };
@@ -86,6 +86,10 @@
 		7D97B2151F15414C008EA24F /* UserAnnotiation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAnnotiation.swift; sourceTree = "<group>"; };
 		7D97B2181F15447E008EA24F /* LoginUserDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUserDataManager.swift; sourceTree = "<group>"; };
 		7D97B21B1F154BFD008EA24F /* PerfilUserDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilUserDataManager.swift; sourceTree = "<group>"; };
+		7D97B22F1F16B1EA008EA24F /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		7D97B2321F16B420008EA24F /* LoginAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
+		7D97B2351F16B52C008EA24F /* UserLoginAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLoginAPI.swift; sourceTree = "<group>"; };
+		7D97B2371F17AF5A008EA24F /* LoginDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDataManager.swift; sourceTree = "<group>"; };
 		D5B92D26E59349B31826A269 /* Pods-LoginViper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginViper.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoginViper/Pods-LoginViper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -219,6 +223,7 @@
 				699727DD1F11B831009CCC8D /* Interface */,
 				7D1E470A1F1031CB00416A44 /* Interactor */,
 				7D1E47091F1031C100416A44 /* Presenter */,
+				7D97B21A1F154BE3008EA24F /* DataManager */,
 				7D1E47011F1030C600416A44 /* View */,
 				7D1E47061F10315700416A44 /* Wireframe */,
 			);
@@ -261,6 +266,8 @@
 		7D46BA9C1F13D0BB00C01704 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				7D97B2311F16B405008EA24F /* LoginAPI */,
+				7D97B22E1F16B1C3008EA24F /* Model */,
 				7D46BA9D1F13D0E700C01704 /* LoginAPI */,
 			);
 			name = Common;
@@ -270,7 +277,6 @@
 			isa = PBXGroup;
 			children = (
 				7D46BA9E1F13D0FE00C01704 /* Entities */,
-				7D46BA9F1F13D10E00C01704 /* LoginAPI.swift */,
 			);
 			name = LoginAPI;
 			sourceTree = "<group>";
@@ -278,7 +284,6 @@
 		7D46BA9E1F13D0FE00C01704 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				7D46BAA11F13D16400C01704 /* LoginUserAPI.swift */,
 				7D46BAB51F14177200C01704 /* LoginUserDetailAPI.swift */,
 				7D46BAB71F1427F100C01704 /* LoginUserMapAPI.swift */,
 			);
@@ -288,7 +293,6 @@
 		7D46BAA31F13F13200C01704 /* PerfilUser */ = {
 			isa = PBXGroup;
 			children = (
-				7D97B21A1F154BE3008EA24F /* DataManager */,
 				7D46BAA41F13F14600C01704 /* Interface */,
 				7D46BAA51F13F17700C01704 /* Interactor */,
 				7D46BAA61F13F17F00C01704 /* Presenter */,
@@ -343,6 +347,7 @@
 		7D97B2171F154449008EA24F /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
+				7D97B2371F17AF5A008EA24F /* LoginDataManager.swift */,
 				7D97B2181F15447E008EA24F /* LoginUserDataManager.swift */,
 			);
 			name = DataManager;
@@ -354,6 +359,32 @@
 				7D97B21B1F154BFD008EA24F /* PerfilUserDataManager.swift */,
 			);
 			name = DataManager;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		7D97B22E1F16B1C3008EA24F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7D97B22F1F16B1EA008EA24F /* Usuario.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7D97B2311F16B405008EA24F /* LoginAPI */ = {
+			isa = PBXGroup;
+			children = (
+				7D97B2341F16B4FB008EA24F /* Entities */,
+				7D97B2321F16B420008EA24F /* LoginAPI.swift */,
+			);
+			name = LoginAPI;
+			sourceTree = "<group>";
+		};
+		7D97B2341F16B4FB008EA24F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				7D97B2351F16B52C008EA24F /* UserLoginAPI.swift */,
+			);
+			name = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -544,19 +575,21 @@
 				7D97B21C1F154BFD008EA24F /* PerfilUserDataManager.swift in Sources */,
 				7D46BAB81F1427F100C01704 /* LoginUserMapAPI.swift in Sources */,
 				7D46BAAC1F13F6B800C01704 /* PerfilWireframe.swift in Sources */,
+				7D97B2361F16B52C008EA24F /* UserLoginAPI.swift in Sources */,
 				7D46BA9B1F13C9F500C01704 /* Help.swift in Sources */,
 				7D1E470C1F10320700416A44 /* LoginInteractor.swift in Sources */,
 				7D1E46D31F1030AD00416A44 /* AppDelegate.swift in Sources */,
 				7D1E47051F10314D00416A44 /* LoginUserViewController.swift in Sources */,
-				7D46BAA01F13D10E00C01704 /* LoginAPI.swift in Sources */,
 				7D46BAAA1F13F1BF00C01704 /* PerfilUserViewController.swift in Sources */,
+				7D97B2301F16B1EA008EA24F /* Usuario.swift in Sources */,
 				699727DF1F11B85F009CCC8D /* LoginModuleInterface.swift in Sources */,
 				7D46BAB61F14177200C01704 /* LoginUserDetailAPI.swift in Sources */,
 				7D46BAB41F14080400C01704 /* ValidationResult.swift in Sources */,
+				7D97B2381F17AF5A008EA24F /* LoginDataManager.swift in Sources */,
 				7D1E47081F10318200416A44 /* LoginWireframe.swift in Sources */,
 				7D46BAB21F13F75900C01704 /* PerfilModuleInterface.swift in Sources */,
 				7D97B2161F15414C008EA24F /* UserAnnotiation.swift in Sources */,
-				7D46BAA21F13D16400C01704 /* LoginUserAPI.swift in Sources */,
+				7D97B2331F16B420008EA24F /* LoginAPI.swift in Sources */,
 				7D46BAAE1F13F71600C01704 /* PerfilPresenter.swift in Sources */,
 				7D1E470E1F10321500416A44 /* LoginPresenter.swift in Sources */,
 				7D46BAB01F13F73900C01704 /* PerfilInteractor.swift in Sources */,

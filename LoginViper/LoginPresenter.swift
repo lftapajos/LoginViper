@@ -46,7 +46,7 @@ class LoginPresenter {
     //Cria variável de Referenecia da do Wireframe para navegação
     var wireframe: LoginWireframe?
     
-    var user: LoginUserDetailAPI? = nil
+    var user: Usuario? //LoginUserDetailAPI
     
 }
 
@@ -60,12 +60,12 @@ extension LoginPresenter: LoginPresenterInput {
     
     //Wirefrae chama ViewController de PerfilUser
     func alertSuccessDismissed() {
-        self.wireframe?.showUserDetail(user: self.user!)
+        self.wireframe?.showUserDetail(user: self.user)
     }
 }
 
 extension LoginPresenter: LoginInteractorOutuput {
-   
+    
     func loginDidFailed(codeError: ErrorValidationResult) {
         
         let emailInvalid = "O E-mail é inválido."
@@ -88,12 +88,14 @@ extension LoginPresenter: LoginInteractorOutuput {
 
     }
     
-    func loginSuccess(user: LoginUserDetailAPI?) {
+    func loginSuccess(user: Usuario?) {
         
         let loginSuccessValid = "Login efetuado com sucesso!"
         
         self.user = user
+        
         self.view?.stopLoading()
         self.view?.showAlertSuccess(alertTitle: "Atenção", buttonText: "OK", message: loginSuccessValid)
     }
+    
 }

@@ -9,48 +9,42 @@
 import Foundation
 import Alamofire
 
+/*
 protocol LoginUserDataManagerProtocol {
     func login(email: String, password: String, successBlock: @escaping((LoginUserDetailAPI)->Void) , failureBlock: @escaping ()->Void)
 }
+*/
 
-class LoginUserDataManager: LoginUserDataManagerProtocol {
+protocol LoginUserDataManagerOutput {
     
-    //Função de Login do Interacor para o DataManager
-    func login(email: String, password: String, successBlock: @escaping((LoginUserDetailAPI)->Void) , failureBlock: @escaping ()->Void) {
+}
 
-        //Faz Request por meio do DataManager(serviços)
-            //Alamofire
-            let url = "\(apiRequest)carregaUsuario.php?email=\(email)&password=\(password)"
-            //print("url ==> \(url)")
+//Login User Data Manager
+class LoginUserDataManager: LoginDataManager { //LoginUserDataManagerProtocol
+    
+    //Declara a API de Login
+    var api = LoginAPI()
+    
+    //Reescreve a função de Login do Data Manager da Aplicação
+    override func login(email: String, password: String, completion: @escaping (Usuario) -> (), failureBlock: @escaping ()->Void) {
+        
+        var user: Usuario?
+        
+        //API recebe os parâmentros de entrada: E-mail e Password
+        api.email = email
+        api.password = password
+        
+        //Chamada o método que vai popular os Dados do usuário logado, vindos da API, mas com o moedelo da Aplicação.
+        api.getUser(completion: { (userLogged) in
+
+            //Carrega os dados com o Modelo de Usuario da Aplicação
+            user = Usuario(id: userLogged.id, name: userLogged.name, email: userLogged.email, phone: userLogged.phone, celphone: userLogged.celphone, address: userLogged.address)
             
-            Alamofire.request(url).responseJSON { response in
-                //print("Request: \(String(describing: response.request))")   // original url request
-                //print("Response: \(String(describing: response.response))") // http url response
-                //print("Result: \(response.result)")                         // response serialization result
-                
-                if let json = response.result.value as? Array<Dictionary<String,Any>> {
-                    //print("JSON: \(json)") // serialized json response
-                    //print("id ==> "json["id"][0])
-                    if let jsonResult = json as? Array<Dictionary<String,String>> {
-                        let idUser = jsonResult[0]["id"]!
-                        let nameUser = jsonResult[0]["nome"]!
-                        let emailUser = jsonResult[0]["email"]!
-                        let phoneUser = jsonResult[0]["telefone"]!
-                        let celphoneUser = jsonResult[0]["celular"]!
-                        let addressUser = jsonResult[0]["endereco"]!
-                        
-                        //Recupera dados e prepara modelo de retorno do LoginUserDetail
-                        let dataSet = LoginUserDetailAPI.init(id: idUser, name: nameUser, email: emailUser, phone: phoneUser, celphone: celphoneUser, address: addressUser)
-                        //print("dataResults ==> \(dataResults)")
-                        
-                        successBlock(dataSet)
-                        
-                    } else {
-                        //Retorna erro de Login com o Serviço
-                        failureBlock()
-                    }
-                }
-            }
+            completion(user!)
+
+        }, failureBlock: {
+            failureBlock()
+        })
     }
     
 }

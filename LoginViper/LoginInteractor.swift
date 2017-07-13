@@ -23,7 +23,8 @@ protocol LoginInteractorOutuput {
     func loginDidFailed(codeError: ErrorValidationResult)
     
     //Função que retorna o Login efetuado com sucesso
-    func loginSuccess(user: LoginUserDetailAPI?)
+    func loginSuccess(user: Usuario?) //LoginUserDetailAPI
+    
 }
 
 //Classe Inetractor do Login
@@ -33,10 +34,10 @@ class LoginInteractor {
     var presenter: LoginInteractorOutuput
     
     //Declara o DataManager com o Protocolo de Login
-    let dataManager: LoginUserDataManagerProtocol
+    let dataManager: LoginUserDataManager //LoginUserDataManagerProtocol
     
     //Construtor do Presenter para Output do Interacor para o Presenter
-    init(presenter: LoginInteractorOutuput, dataManager: LoginUserDataManagerProtocol) {
+    init(presenter: LoginInteractorOutuput, dataManager: LoginUserDataManager) {  //LoginUserDataManagerProtocol
         self.presenter = presenter
         self.dataManager = dataManager
     }
@@ -61,6 +62,21 @@ extension LoginInteractor: LoginInteractorInput {
         }
         
         //Faz Request por meio do DataManager(serviços)
+        //self.dataManager.api.email = email
+        //self.dataManager.api.password = password
+        //self.dataManager.api.getUser(completion: userLogged, failureBlock: <#T##() -> Void#>)
+        
+        //self.dataManager.getUser(completion: ([UserLoginAPI])->[Usuario])
+        
+        self.dataManager.login(email: email, password: password, completion: { (userLogged) in
+            //Callback de Login com sucesso
+            self.presenter.loginSuccess(user: userLogged)
+            //print("Retorno userLogged ==> \(userLogged[0].id)")
+        }, failureBlock: {
+            self.presenter.loginDidFailed(codeError: .failureService)
+        })
+        
+        /*
         self.dataManager.login(email: email, password: password, successBlock: { (userLogged) in
             //Callback de Login com sucesso
             self.presenter.loginSuccess(user: userLogged)
@@ -68,6 +84,7 @@ extension LoginInteractor: LoginInteractorInput {
             //Callback de Login com falha no serviço
             self.presenter.loginDidFailed(codeError: .failureService)
         })
+        */
     }
 }
 

@@ -13,7 +13,7 @@ class PerfilWireframe {
     var window: UIWindow! = nil
     
     //Funçao para carregar a viewController
-    func present(user: LoginUserDetailAPI, in window: UIWindow) {
+    func present(user: Usuario, in window: UIWindow) {
         
         self.window = window
         
