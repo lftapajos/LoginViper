@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UsuarioLocation: NSObject {
+struct UsuarioLocation {
     
     var name = ""
     var lastname = ""
@@ -26,7 +26,7 @@ class UsuarioLocation: NSObject {
 
 extension UsuarioLocation {
     
-    convenience init(userLocationAPI: UsuarioLocation) {
+    init(userLocationAPI: UsuarioLocation) {
         self.init(name: userLocationAPI.name, lastname: userLocationAPI.lastname, latitude: userLocationAPI.latitude, longitude: userLocationAPI.longitude)
     }
 }

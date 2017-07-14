@@ -8,7 +8,7 @@
 
 import Foundation
 
-class UserLoginAPI: NSObject {
+struct UserLoginAPI {
     
     var id = ""
     var name = ""

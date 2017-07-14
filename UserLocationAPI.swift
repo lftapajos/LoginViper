@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserLocationAPI: NSObject {
+struct UserLocationAPI {
     var name = ""
     var lastname = ""
     var latitude = ""
