@@ -22,8 +22,6 @@ class LoginUserViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var loginButton: UIButton!
     
-    @IBOutlet weak var activity: UIActivityIndicatorView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,17 +55,6 @@ class LoginUserViewController: UIViewController, UITextFieldDelegate {
 }
 
 extension LoginUserViewController: LoginPresenterOutput {
-    func showLoading() {
-        //Carrega loading do Activity Indicator.
-        self.activity.startAnimating()
-    }
-    
-    func stopLoading() {
-        //Efetua parada do Activity Indicator.
-        self.activity.stopAnimating()
-        //self.activity.isHidden = true
-    }
-    
     //Mostra Alerta de Erro
     func showAlert(alertTitle: String, buttonText: String, errorMessage: String){
         

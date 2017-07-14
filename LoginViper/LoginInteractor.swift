@@ -16,7 +16,7 @@ protocol LoginInteractorInput {
     func login(email: String, password: String)
 }
 
-//Procolo de POutput do Interactor para a o Presenter
+//Procolo de Output do Interactor para a o Presenter
 protocol LoginInteractorOutuput {
     
     //Função que retorna Falha de Login
@@ -78,6 +78,18 @@ extension LoginInteractor: LoginInteractorInput {
     
     func isValidPassword(password: String) -> Bool {
         return password.characters.count > 3
+    }
+    
+    func numberOfVowels(in string: String) -> Int {
+        let vowels: [Character] = ["a", "e", "i", "o", "u",
+                                   "A", "E", "I", "O", "U"]
+        var numberOfVowels = 0
+        for character in string.characters {
+            if vowels.contains(character) {
+                numberOfVowels += 1
+            }
+        }
+        return numberOfVowels
     }
 }
 

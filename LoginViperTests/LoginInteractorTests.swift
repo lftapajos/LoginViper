@@ -52,4 +52,16 @@ class LoginInteractorTests: XCTestCase {
         XCTAssertTrue(loginInteractor.isValidPassword(password: "1234"))
     }
     
+    //Teste de Exemplo de retorno do número de vogais de um Nome
+    func testNumberOfVowelsWhenPassedStringReturnsCount() {
+        
+        let stringTest = "Jose"
+        
+        let numberOfVowels = loginInteractor.numberOfVowels(in: stringTest)
+        
+        XCTAssertEqual(numberOfVowels, 2, "Deve retornar 2")
+        //XCTAssertEqual(numberOfVowels, 4, "Deve retornar 3")
+        
+    }
+    
 }

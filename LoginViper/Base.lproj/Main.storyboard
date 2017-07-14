@@ -46,15 +46,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="oh3-hA-fuG">
-                                <rect key="frame" x="169" y="197" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.69520527119999997" green="0.8892592788" blue="0.90453881030000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <outlet property="activity" destination="oh3-hA-fuG" id="nce-pF-rWc"/>
                         <outlet property="emailTextField" destination="Odz-wa-zFf" id="b7S-ni-zTJ"/>
                         <outlet property="loginButton" destination="Io5-Su-IBa" id="AcM-KU-UZm"/>
                         <outlet property="passwordTextField" destination="fhN-69-79e" id="aOh-r8-kKy"/>

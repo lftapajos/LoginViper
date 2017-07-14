@@ -58,11 +58,7 @@ class LoginAPI {
         let url = "\(apiRequest)carregaMapa.php?id=\(id)"
         
         Alamofire.request(url).responseJSON { response in
-            //print("Request: \(String(describing: response.request))")   // original url request
-            //print("Response: \(String(describing: response.response))") // http url response
-            //print("Result: \(response.result)")                         // response serialization result
-            //print("Value: \(String(describing: response.result.value))")
-            
+
             if let json = response.result.value as? Dictionary<String,Any> {
                 if let jsonResult = json as? Dictionary<String,String> {
                     let nameUser = jsonResult["nome"]!

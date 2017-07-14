@@ -36,7 +36,7 @@ class PerfilUserDataManagerTests: XCTestCase {
         XCTAssertTrue(userLocation.latitude == userLocationApi.latitude)
         XCTAssertTrue(userLocation.longitude == userLocationApi.longitude)
         
-        //Retornos Correots por Dado
+        //Retornos Corretos por Dados
         XCTAssertTrue(userLocation.name == "Jose")
         XCTAssertTrue(userLocation.lastname == "Silva")
         XCTAssertTrue(userLocation.latitude == "-22.999888")

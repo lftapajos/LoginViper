@@ -17,8 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let wireframe = LoginWireframe()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        
+
         wireframe.present(in: window!)
         
         //Chama função que carrega a ViewController inicial
