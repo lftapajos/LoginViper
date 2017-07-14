@@ -28,7 +28,7 @@ class LoginUserDataManager: LoginDataManager {
         api.getUser(completion: { (userLogged) in
 
             //Carrega os dados com o Modelo de Usuario da Aplicação
-            user = Usuario(id: userLogged.id, name: userLogged.name, email: userLogged.email, phone: userLogged.phone, celphone: userLogged.celphone, address: userLogged.address)
+            user = Usuario(userAPI: userLogged)
             
             completion(user!)
 

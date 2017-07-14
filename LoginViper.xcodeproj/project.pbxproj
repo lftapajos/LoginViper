@@ -36,6 +36,9 @@
 		7D97B2331F16B420008EA24F /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97B2321F16B420008EA24F /* LoginAPI.swift */; };
 		7D97B2361F16B52C008EA24F /* UserLoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97B2351F16B52C008EA24F /* UserLoginAPI.swift */; };
 		7D97B2381F17AF5A008EA24F /* LoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97B2371F17AF5A008EA24F /* LoginDataManager.swift */; };
+		7D97B23C1F1906CD008EA24F /* LoginInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97B23B1F1906CD008EA24F /* LoginInteractorTests.swift */; };
+		7D97B23E1F190C8B008EA24F /* LoginUserDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97B23D1F190C8B008EA24F /* LoginUserDataManagerTests.swift */; };
+		7D97B2401F1912D0008EA24F /* PerfilUserDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97B23F1F1912D0008EA24F /* PerfilUserDataManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +95,9 @@
 		7D97B2321F16B420008EA24F /* LoginAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
 		7D97B2351F16B52C008EA24F /* UserLoginAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLoginAPI.swift; sourceTree = "<group>"; };
 		7D97B2371F17AF5A008EA24F /* LoginDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDataManager.swift; sourceTree = "<group>"; };
+		7D97B23B1F1906CD008EA24F /* LoginInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInteractorTests.swift; sourceTree = "<group>"; };
+		7D97B23D1F190C8B008EA24F /* LoginUserDataManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUserDataManagerTests.swift; sourceTree = "<group>"; };
+		7D97B23F1F1912D0008EA24F /* PerfilUserDataManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilUserDataManagerTests.swift; sourceTree = "<group>"; };
 		D5B92D26E59349B31826A269 /* Pods-LoginViper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginViper.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoginViper/Pods-LoginViper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -203,6 +209,9 @@
 			isa = PBXGroup;
 			children = (
 				7D1E46E71F1030AD00416A44 /* LoginViperTests.swift */,
+				7D97B23D1F190C8B008EA24F /* LoginUserDataManagerTests.swift */,
+				7D97B23B1F1906CD008EA24F /* LoginInteractorTests.swift */,
+				7D97B23F1F1912D0008EA24F /* PerfilUserDataManagerTests.swift */,
 				7D1E46E91F1030AD00416A44 /* Info.plist */,
 			);
 			path = LoginViperTests;
@@ -597,6 +606,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D1E46E81F1030AD00416A44 /* LoginViperTests.swift in Sources */,
+				7D97B2401F1912D0008EA24F /* PerfilUserDataManagerTests.swift in Sources */,
+				7D97B23E1F190C8B008EA24F /* LoginUserDataManagerTests.swift in Sources */,
+				7D97B23C1F1906CD008EA24F /* LoginInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

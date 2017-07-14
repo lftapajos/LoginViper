@@ -26,3 +26,10 @@ class Usuario: NSObject {
         self.address = address
     }
 }
+
+extension Usuario {
+    
+    convenience init(userAPI: UserLoginAPI) {
+        self.init(id: userAPI.id, name: userAPI.name, email: userAPI.email, phone: userAPI.phone, celphone: userAPI.celphone, address: userAPI.address)
+    }
+}

@@ -23,3 +23,10 @@ class UsuarioLocation: NSObject {
     }
     
 }
+
+extension UsuarioLocation {
+    
+    convenience init(userLocationAPI: UsuarioLocation) {
+        self.init(name: userLocationAPI.name, lastname: userLocationAPI.lastname, latitude: userLocationAPI.latitude, longitude: userLocationAPI.longitude)
+    }
+}
