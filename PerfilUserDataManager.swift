@@ -9,45 +9,31 @@
 import Foundation
 import Alamofire
 
-protocol PerfilUserDataManagerProtocol {
-    func getUserLocation(from userID: String, successBlock: @escaping((LoginUserMapAPI)->Void) , failureBlock: @escaping ()->Void)
-}
 
-class PerfilUserDataManager: PerfilUserDataManagerProtocol {
+class PerfilUserDataManager: PerfilDataManager {
     
-    func getUserLocation(from userID: String, successBlock: @escaping((LoginUserMapAPI)->Void) , failureBlock: @escaping ()->Void) {
+    //Declara a API de Login
+    var api = LoginAPI()
+    
+    //Reescreve a função de Login do Data Manager da Aplicação
+    override func userLocation(id: String, completion: @escaping (UsuarioLocation) -> (), failureBlock: @escaping ()->Void) {
         
-        //Faz Request por meio do DataManager(serviços)
-        let url = "\(apiRequest)carregaMapa.php?id=\(userID)"
+        var userLocation: UsuarioLocation?
         
-        //Chama serviço do DataManager que irá retornar a latitude e longitude do endereço do usuário
-        Alamofire.request(url).responseJSON { response in
-            //print("Request: \(String(describing: response.request))")   // original url request
-            //print("Response: \(String(describing: response.response))") // http url response
-            //print("Result: \(response.result)")                         // response serialization result
+        //API recebe s parâmentro de entrada: Id
+        api.id = id
+        
+        //Chamada o método que vai popular os Dados do usuário logado, vindos da API, mas com o moedelo da Aplicação.
+        api.getUserLocation(completion: { (userLogged) in
             
-            if let json = response.result.value as? Dictionary<String,Any> {
-                //print("JSON: \(json)") // serialized json response
-                //print("id ==> "json["id"][0])
-                if let jsonResult = json as? Dictionary<String,String> {
-                    let idUser = jsonResult["id"]!
-                    let nameUser = jsonResult["nome"]!
-                    let latitudeUser = jsonResult["latitude"]!
-                    let longitudeUser = jsonResult["longitude"]!
-                    
-                    //Recupera dados e prepara modelo de retorno do LoginUserDetail
-                    let dataSet = LoginUserMapAPI.init(id: idUser, name: nameUser, latitude: latitudeUser, longitude: longitudeUser)
-                    //print("dataResults ==> \(dataResults)")
-                    
-                    successBlock(dataSet)
-                    
-                } else {
-                    //Retorna erro de Login com o Serviço
-                    failureBlock()
-                }
-            }
-        }
-        
+            //Carrega os dados com o Modelo de Usuario da Aplicação
+            userLocation = UsuarioLocation(name: userLogged.name, lastname: userLogged.lastname, latitude: userLogged.latitude, longitude: userLogged.longitude)
+            
+            completion(userLocation!)
+            
+        }, failureBlock: {
+            failureBlock()
+        })
     }
-    
+
 }

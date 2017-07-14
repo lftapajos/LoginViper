@@ -9,18 +9,8 @@
 import Foundation
 import Alamofire
 
-/*
-protocol LoginUserDataManagerProtocol {
-    func login(email: String, password: String, successBlock: @escaping((LoginUserDetailAPI)->Void) , failureBlock: @escaping ()->Void)
-}
-*/
-
-protocol LoginUserDataManagerOutput {
-    
-}
-
 //Login User Data Manager
-class LoginUserDataManager: LoginDataManager { //LoginUserDataManagerProtocol
+class LoginUserDataManager: LoginDataManager { 
     
     //Declara a API de Login
     var api = LoginAPI()

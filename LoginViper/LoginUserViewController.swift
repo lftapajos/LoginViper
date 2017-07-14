@@ -46,8 +46,6 @@ class LoginUserViewController: UIViewController, UITextFieldDelegate {
     @IBAction func tapLogin(_ sender: Any) {
         //Passa os parâmentros de login de acordo com os TextFields preenchidos
         presenter?.didTapLoginButton(email: emailTextField.text!, password: passwordTextField.text!)
-        
-        //self.showLoading()
     }
     
     //MARK:- TextFieldDelegate

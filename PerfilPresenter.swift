@@ -13,7 +13,7 @@ import MapKit
 protocol PerfilPresenterOutput {
     func showInfoUser(id: String, name: String, email: String, phone: String, celphone: String, address: String)
     func showLogoff(alertTitle: String, buttonText: String, message: String)
-    func showUserLocationInMap(name: String, latitude: String, longitude: String)
+    func showUserLocationInMap(name: String, lastname: String, latitude: String, longitude: String)
 }
 
 protocol PerfilPresenterInput {
@@ -34,9 +34,9 @@ class PerfilPresenter {
     //Cria variável de Referenecia da do Wireframe para navegação
     var wireframe: PerfilWireframe?
     
-    let user: Usuario? //LoginUserDetailAPI
+    let user: Usuario?
     
-    init(user: Usuario?) { //LoginUserDetailAPI
+    init(user: Usuario?) {
         self.user = user
     }
 }
@@ -52,7 +52,6 @@ extension PerfilPresenter: PerfilPresenterInput {
     func didTapButtonShowMap() {
         
         //Passa para o indereactor o id do usuário
-        //interactor?.getUserLocation(from: (user))
         interactor?.getUserLocation(from: (user?.id)!)
     }
     
@@ -65,10 +64,12 @@ extension PerfilPresenter: PerfilPresenterInput {
 
 extension PerfilPresenter: PerfilInteractorOutput {
     
+    func didLoadUserLocation(user: UsuarioLocation) {
+        self.view?.showUserLocationInMap(name: user.name, lastname: user.lastname, latitude: user.latitude, longitude: user.longitude)
+    }
+    
     func didFailLoadUserLocation() {
         self.view?.showLogoff(alertTitle: "Atenção", buttonText: "OK", message: "Falha ao trazer a localização do usuário.")
     }
-    func didLoadUserLocation(user: LoginUserMapAPI) {
-        self.view?.showUserLocationInMap(name: user.name, latitude: user.latitude, longitude: user.longitude)
-    }
+
 }

@@ -23,7 +23,7 @@ protocol LoginInteractorOutuput {
     func loginDidFailed(codeError: ErrorValidationResult)
     
     //Função que retorna o Login efetuado com sucesso
-    func loginSuccess(user: Usuario?) //LoginUserDetailAPI
+    func loginSuccess(user: Usuario?)
     
 }
 
@@ -62,12 +62,6 @@ extension LoginInteractor: LoginInteractorInput {
         }
         
         //Faz Request por meio do DataManager(serviços)
-        //self.dataManager.api.email = email
-        //self.dataManager.api.password = password
-        //self.dataManager.api.getUser(completion: userLogged, failureBlock: <#T##() -> Void#>)
-        
-        //self.dataManager.getUser(completion: ([UserLoginAPI])->[Usuario])
-        
         self.dataManager.login(email: email, password: password, completion: { (userLogged) in
             //Callback de Login com sucesso
             self.presenter.loginSuccess(user: userLogged)
@@ -76,15 +70,6 @@ extension LoginInteractor: LoginInteractorInput {
             self.presenter.loginDidFailed(codeError: .failureService)
         })
         
-        /*
-        self.dataManager.login(email: email, password: password, successBlock: { (userLogged) in
-            //Callback de Login com sucesso
-            self.presenter.loginSuccess(user: userLogged)
-        }, failureBlock: {
-            //Callback de Login com falha no serviço
-            self.presenter.loginDidFailed(codeError: .failureService)
-        })
-        */
     }
 }
 

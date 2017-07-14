@@ -18,7 +18,7 @@ class PerfilUserViewController: UIViewController, MKMapViewDelegate, CLLocationM
     var eventHandler: PerfilModuleInterface?
 
     //Modelo de usuário retornado da API
-    var user: LoginUserDetailAPI?
+    var user: UserLoginAPI?
     
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -77,7 +77,7 @@ extension PerfilUserViewController: PerfilPresenterOutput {
         
     }
 
-    func showUserLocationInMap(name: String, latitude: String, longitude: String) {
+    func showUserLocationInMap(name: String, lastname: String, latitude: String, longitude: String) {
         
         //Requisita a localizaçãop do usuário
         self.locationManager.requestWhenInUseAuthorization()
@@ -95,11 +95,14 @@ extension PerfilUserViewController: PerfilPresenterOutput {
         let region = MKCoordinateRegion(center: location, span: span)
         self.mapView.setRegion(region, animated: true)
         
+        //Formata Title do Annotation
+        let titleFormated = "\(name) \(lastname)"
+        
         //Formata Subtitle do Anntoation
         let locationFormated = "\(latitude), \(longitude)"
         
         //Recebe a Annotation preparada com os Dados de apresentação
-        let annotation = UserAnnotation(coordinate: location, title: name, subtitle: locationFormated)
+        let annotation = UserAnnotation(coordinate: location, title: titleFormated, subtitle: locationFormated)
         
         //Adiciona alfinete no mapa com a localização do usuário
         self.mapView.addAnnotation(annotation)

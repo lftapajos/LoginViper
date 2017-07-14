@@ -46,7 +46,7 @@ class LoginPresenter {
     //Cria variável de Referenecia da do Wireframe para navegação
     var wireframe: LoginWireframe?
     
-    var user: Usuario? //LoginUserDetailAPI
+    var user: Usuario?
     
 }
 

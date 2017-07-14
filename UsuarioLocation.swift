@@ -1,23 +1,23 @@
 //
-//  LoginUserMapAPI.swift
+//  UsuarioLocation.swift
 //  LoginViper
 //
-//  Created by Luiz Felipe Gomes on 10/07/17.
+//  Created by Luis Felipe Tapajos on 13/07/17.
 //  Copyright © 2017 Luiz Felipe Gomes. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class LoginUserMapAPI {
+class UsuarioLocation: NSObject {
     
-    var id = ""
     var name = ""
+    var lastname = ""
     var latitude = ""
     var longitude = ""
     
-    init(id: String, name: String, latitude: String, longitude: String) {
-        self.id = id
+    init(name: String, lastname: String, latitude: String, longitude: String) {
         self.name = name
+        self.lastname = lastname
         self.latitude = latitude
         self.longitude = longitude
     }
