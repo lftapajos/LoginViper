@@ -20,6 +20,4 @@ class UserAnnotation: NSObject, MKAnnotation {
         self.title = title
         self.subtitle = subtitle
     }
-    
-    
 }
