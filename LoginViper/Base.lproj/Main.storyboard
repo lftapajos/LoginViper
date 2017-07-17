@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,33 +22,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fhN-69-79e">
-                                <rect key="frame" x="15" y="280" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fhN-69-79e">
+                                <rect key="frame" x="41" y="326" width="291" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Io5-Su-IBa">
-                                <rect key="frame" x="128" y="318" width="117" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="ENTRAR">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Odz-wa-zFf">
+                                <rect key="frame" x="41" y="288" width="291" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Cbl-4N-aca">
+                                <rect key="frame" x="41" y="28" width="291" height="252"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Io5-Su-IBa">
+                                <rect key="frame" x="132" y="364" width="110" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Xaj-oI-sFd"/>
+                                    <constraint firstAttribute="width" constant="110" id="cu7-RA-Gnb"/>
+                                </constraints>
+                                <state key="normal" image="enter.png">
                                     <color key="titleColor" red="0.22809797870000001" green="0.57009904349999996" blue="0.35225256199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="tapLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ke2-j7-dnp"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Odz-wa-zFf">
-                                <rect key="frame" x="15" y="242" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.69520527119999997" green="0.8892592788" blue="0.90453881030000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Odz-wa-zFf" firstAttribute="leading" secondItem="fhN-69-79e" secondAttribute="leading" id="CTq-LI-64V"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Odz-wa-zFf" secondAttribute="trailing" constant="27" id="G1N-M8-uf9"/>
+                            <constraint firstItem="Cbl-4N-aca" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="I8Q-k1-xqr"/>
+                            <constraint firstItem="Odz-wa-zFf" firstAttribute="top" secondItem="Cbl-4N-aca" secondAttribute="bottom" constant="8" symbolic="YES" id="MAu-7f-es7"/>
+                            <constraint firstItem="Cbl-4N-aca" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="R4U-oN-KFJ"/>
+                            <constraint firstItem="Odz-wa-zFf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="adW-mi-4mf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Io5-Su-IBa" secondAttribute="bottom" constant="263" id="hae-xf-mjy"/>
+                            <constraint firstItem="fhN-69-79e" firstAttribute="top" secondItem="Odz-wa-zFf" secondAttribute="bottom" constant="8" symbolic="YES" id="kKk-O7-ZVc"/>
+                            <constraint firstItem="Odz-wa-zFf" firstAttribute="trailing" secondItem="fhN-69-79e" secondAttribute="trailing" id="lYM-LN-VxH"/>
+                            <constraint firstItem="fhN-69-79e" firstAttribute="centerX" secondItem="Io5-Su-IBa" secondAttribute="centerX" id="o95-9V-qCJ"/>
+                            <constraint firstItem="Io5-Su-IBa" firstAttribute="top" secondItem="fhN-69-79e" secondAttribute="bottom" constant="8" symbolic="YES" id="rcJ-iK-fhx"/>
+                            <constraint firstItem="Cbl-4N-aca" firstAttribute="centerX" secondItem="Odz-wa-zFf" secondAttribute="centerX" id="xD1-LW-2bW"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="Odz-wa-zFf" id="b7S-ni-zTJ"/>
@@ -138,11 +156,10 @@
                                     <action selector="tapButtonClose:" destination="Wcp-Ds-io1" eventType="touchUpInside" id="Mge-XE-uwD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yh0-QX-DxY">
-                                <rect key="frame" x="65" y="266" width="244" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yh0-QX-DxY">
+                                <rect key="frame" x="32" y="264" width="310" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="MOSTRAR NO MAPA">
+                                <state key="normal" image="showMap.png">
                                     <color key="titleColor" red="0.22809797870000001" green="0.57009904349999996" blue="0.35225256199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -167,4 +184,9 @@
             <point key="canvasLocation" x="928.79999999999995" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="enter.png" width="110" height="40"/>
+        <image name="logo.png" width="290" height="252"/>
+        <image name="showMap.png" width="310" height="40"/>
+    </resources>
 </document>

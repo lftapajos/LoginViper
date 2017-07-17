@@ -40,6 +40,9 @@
 		7D97B23E1F190C8B008EA24F /* LoginUserDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97B23D1F190C8B008EA24F /* LoginUserDataManagerTests.swift */; };
 		7D97B2401F1912D0008EA24F /* PerfilUserDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97B23F1F1912D0008EA24F /* PerfilUserDataManagerTests.swift */; };
 		7D97B2421F194A95008EA24F /* LoginAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97B2411F194A95008EA24F /* LoginAPITests.swift */; };
+		7D97B2481F1CF47F008EA24F /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D97B2471F1CF47F008EA24F /* logo.png */; };
+		7D97B24C1F1CF727008EA24F /* showMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D97B24A1F1CF727008EA24F /* showMap.png */; };
+		7D97B24D1F1CF727008EA24F /* enter.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D97B24B1F1CF727008EA24F /* enter.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +103,9 @@
 		7D97B23D1F190C8B008EA24F /* LoginUserDataManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUserDataManagerTests.swift; sourceTree = "<group>"; };
 		7D97B23F1F1912D0008EA24F /* PerfilUserDataManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilUserDataManagerTests.swift; sourceTree = "<group>"; };
 		7D97B2411F194A95008EA24F /* LoginAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAPITests.swift; sourceTree = "<group>"; };
+		7D97B2471F1CF47F008EA24F /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		7D97B24A1F1CF727008EA24F /* showMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = showMap.png; sourceTree = "<group>"; };
+		7D97B24B1F1CF727008EA24F /* enter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enter.png; sourceTree = "<group>"; };
 		D5B92D26E59349B31826A269 /* Pods-LoginViper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginViper.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoginViper/Pods-LoginViper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -296,6 +302,7 @@
 		7D46BA9C1F13D0BB00C01704 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				7D97B2451F1CF462008EA24F /* Images */,
 				7D97B2311F16B405008EA24F /* LoginAPI */,
 			);
 			name = Common;
@@ -391,6 +398,32 @@
 				6997281C1F1852FB009CCC8D /* UserLocationAPI.swift */,
 			);
 			name = Entities;
+			sourceTree = "<group>";
+		};
+		7D97B2451F1CF462008EA24F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7D97B2491F1CF71D008EA24F /* buttons */,
+				7D97B2461F1CF475008EA24F /* Logo */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		7D97B2461F1CF475008EA24F /* Logo */ = {
+			isa = PBXGroup;
+			children = (
+				7D97B2471F1CF47F008EA24F /* logo.png */,
+			);
+			name = Logo;
+			sourceTree = "<group>";
+		};
+		7D97B2491F1CF71D008EA24F /* buttons */ = {
+			isa = PBXGroup;
+			children = (
+				7D97B24A1F1CF727008EA24F /* showMap.png */,
+				7D97B24B1F1CF727008EA24F /* enter.png */,
+			);
+			name = buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -503,7 +536,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D97B2481F1CF47F008EA24F /* logo.png in Resources */,
 				7D1E46DD1F1030AD00416A44 /* LaunchScreen.storyboard in Resources */,
+				7D97B24D1F1CF727008EA24F /* enter.png in Resources */,
+				7D97B24C1F1CF727008EA24F /* showMap.png in Resources */,
 				7D1E46DA1F1030AD00416A44 /* Assets.xcassets in Resources */,
 				7D1E46D81F1030AD00416A44 /* Main.storyboard in Resources */,
 			);
