@@ -11,6 +11,7 @@ import Alamofire
 
 class LoginAPI {
     
+    var id = ""
     var email = ""
     var password = ""
     
@@ -41,6 +42,36 @@ class LoginAPI {
                         phone: phoneUser,
                         celphone: celphoneUser,
                         address: addressUser)
+                    
+                    completion(user)
+                    
+                } else {
+                    //Retorna erro de Login com o Serviço
+                    failureBlock()
+                }
+            }
+        }
+    }
+    
+    func getUserLocation(completion: @escaping (UserLocationAPI)->(), failureBlock: @escaping ()->Void) {
+        
+        let url = "\(apiRequest)carregaMapa.php?id=\(id)"
+        
+        Alamofire.request(url).responseJSON { response in
+
+            if let json = response.result.value as? Dictionary<String,Any> {
+                if let jsonResult = json as? Dictionary<String,String> {
+                    let nameUser = jsonResult["nome"]!
+                    let lastnameUser = jsonResult["sobrenome"]!
+                    let latitudeUser = jsonResult["latitude"]!
+                    let longitudeUser = jsonResult["longitude"]!
+                    
+                    //Recupera dados e prepara modelo de retorno do LoginUserDetail
+                    let user = UserLocationAPI(
+                        name: nameUser,
+                        lastname: lastnameUser,
+                        latitude: latitudeUser,
+                        longitude: longitudeUser)
                     
                     completion(user)
                     

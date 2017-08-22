@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Usuario: NSObject {
+struct Usuario {
     
     var id = ""
     var name = ""
@@ -24,5 +24,12 @@ class Usuario: NSObject {
         self.phone = phone
         self.celphone = celphone
         self.address = address
+    }
+}
+
+extension Usuario {
+    
+    init(userAPI: UserLoginAPI) {
+        self.init(id: userAPI.id, name: userAPI.name, email: userAPI.email, phone: userAPI.phone, celphone: userAPI.celphone, address: userAPI.address)
     }
 }

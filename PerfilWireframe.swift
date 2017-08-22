@@ -37,7 +37,6 @@ class PerfilWireframe {
         //viewController recebe a dependência do Presenter
         viewController?.presenter = presenter
         
-        
         //Adiciona a Viewcontroller ao Root
         window.rootViewController = viewController
         

@@ -9,18 +9,8 @@
 import Foundation
 import Alamofire
 
-/*
-protocol LoginUserDataManagerProtocol {
-    func login(email: String, password: String, successBlock: @escaping((LoginUserDetailAPI)->Void) , failureBlock: @escaping ()->Void)
-}
-*/
-
-protocol LoginUserDataManagerOutput {
-    
-}
-
 //Login User Data Manager
-class LoginUserDataManager: LoginDataManager { //LoginUserDataManagerProtocol
+class LoginUserDataManager: LoginDataManager { 
     
     //Declara a API de Login
     var api = LoginAPI()
@@ -38,7 +28,7 @@ class LoginUserDataManager: LoginDataManager { //LoginUserDataManagerProtocol
         api.getUser(completion: { (userLogged) in
 
             //Carrega os dados com o Modelo de Usuario da Aplicação
-            user = Usuario(id: userLogged.id, name: userLogged.name, email: userLogged.email, phone: userLogged.phone, celphone: userLogged.celphone, address: userLogged.address)
+            user = Usuario(userAPI: userLogged)
             
             completion(user!)
 

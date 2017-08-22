@@ -16,14 +16,14 @@ protocol LoginInteractorInput {
     func login(email: String, password: String)
 }
 
-//Procolo de POutput do Interactor para a o Presenter
+//Procolo de Output do Interactor para a o Presenter
 protocol LoginInteractorOutuput {
     
     //Função que retorna Falha de Login
     func loginDidFailed(codeError: ErrorValidationResult)
     
     //Função que retorna o Login efetuado com sucesso
-    func loginSuccess(user: Usuario?) //LoginUserDetailAPI
+    func loginSuccess(user: Usuario?)
     
 }
 
@@ -49,25 +49,19 @@ extension LoginInteractor: LoginInteractorInput {
         
         //Valida o E-mail
         //Se o E-mail é valido, segue a função
-        guard email.isValidEmail else {
+        guard self.isValidEmail(email: email) else {
             //Senão retorna ao Presenter E-mail inválido.
             return self.presenter.loginDidFailed(codeError: .failureEmail)
         }
         
         //Valida Pasword
         //Se a Senha é valida, segue a função
-        guard password.characters.count > 3 else {
+        guard self.isValidPassword(password: password) else {
             //Senão retorna ao Presenter Senha inválida.
             return self.presenter.loginDidFailed(codeError: .failurePassword)
         }
         
         //Faz Request por meio do DataManager(serviços)
-        //self.dataManager.api.email = email
-        //self.dataManager.api.password = password
-        //self.dataManager.api.getUser(completion: userLogged, failureBlock: <#T##() -> Void#>)
-        
-        //self.dataManager.getUser(completion: ([UserLoginAPI])->[Usuario])
-        
         self.dataManager.login(email: email, password: password, completion: { (userLogged) in
             //Callback de Login com sucesso
             self.presenter.loginSuccess(user: userLogged)
@@ -76,57 +70,36 @@ extension LoginInteractor: LoginInteractorInput {
             self.presenter.loginDidFailed(codeError: .failureService)
         })
         
-        /*
-        self.dataManager.login(email: email, password: password, successBlock: { (userLogged) in
-            //Callback de Login com sucesso
-            self.presenter.loginSuccess(user: userLogged)
-        }, failureBlock: {
-            //Callback de Login com falha no serviço
-            self.presenter.loginDidFailed(codeError: .failureService)
-        })
-        */
+    }
+    
+    func isValidEmail(email: String) -> Bool {
+        return email.isValidEmail
+    }
+    
+    func isValidPassword(password: String) -> Bool {
+        return password.characters.count > 3
+    }
+    
+    func numberOfVowels(in string: String) -> Int {
+        let vowels: [Character] = ["a", "e", "i", "o", "u",
+                                   "A", "E", "I", "O", "U"]
+        var numberOfVowels = 0
+        for character in string.characters {
+            if vowels.contains(character) {
+                numberOfVowels += 1
+            }
+        }
+        return numberOfVowels
     }
 }
 
 extension String {
     
-    //To check text field or String is blank or not
-    var isBlank: Bool {
-        get {
-            let trimmed = trimmingCharacters(in: CharacterSet.whitespaces)
-            return trimmed.isEmpty
-        }
-    }
-    
     //Validate Email
     var isValidEmail: Bool {
-        
         do {
             let regex = try NSRegularExpression(pattern: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}", options: .caseInsensitive)
             return regex.firstMatch(in: self, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, self.characters.count)) != nil
-        } catch {
-            return false
-        }
-    }
-    
-    var isAlphanumeric: Bool {
-        return !isEmpty && range(of: "[^a-zA-Z0-9]", options: .regularExpression) == nil
-    }
-    
-    //validate Password
-    var isValidPassword: Bool {
-        do {
-            let regex = try NSRegularExpression(pattern: "^[a-zA-Z_0-9\\-_,;.:#+*?=!§$%&/()@]+$", options: .caseInsensitive)
-            if(regex.firstMatch(in: self, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, self.characters.count)) != nil){
-                
-                if(self.characters.count>=6 && self.characters.count<=20){
-                    return true
-                }else{
-                    return false
-                }
-            }else{
-                return false
-            }
         } catch {
             return false
         }

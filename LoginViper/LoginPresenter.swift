@@ -20,12 +20,6 @@ protocol LoginPresenterInput {
 //Protocolo de Output do Presenter para a View
 protocol LoginPresenterOutput {
     
-    //Função de Loading da View
-    func showLoading()
-    
-    //Fução de Stop do Loading da View
-    func stopLoading()
-    
     //Função que retorna erro de Login para a View
     func showAlert(alertTitle: String, buttonText: String, errorMessage: String)
     
@@ -46,7 +40,7 @@ class LoginPresenter {
     //Cria variável de Referenecia da do Wireframe para navegação
     var wireframe: LoginWireframe?
     
-    var user: Usuario? //LoginUserDetailAPI
+    var user: Usuario?
     
 }
 
@@ -75,15 +69,12 @@ extension LoginPresenter: LoginInteractorOutuput {
         switch codeError {
         case .failureEmail:
             self.view?.showAlert(alertTitle: "Atenção", buttonText: "OK", errorMessage: emailInvalid)
-            self.view?.stopLoading()
             
         case .failurePassword:
             self.view?.showAlert(alertTitle: "Atenção", buttonText: "OK", errorMessage: passwordInvalid)
-            self.view?.stopLoading()
             
         case .failureService:
             self.view?.showAlert(alertTitle: "Atenção", buttonText: "OK", errorMessage: noResults)
-            self.view?.stopLoading()
         }
 
     }
@@ -91,10 +82,7 @@ extension LoginPresenter: LoginInteractorOutuput {
     func loginSuccess(user: Usuario?) {
         
         let loginSuccessValid = "Login efetuado com sucesso!"
-        
         self.user = user
-        
-        self.view?.stopLoading()
         self.view?.showAlertSuccess(alertTitle: "Atenção", buttonText: "OK", message: loginSuccessValid)
     }
     

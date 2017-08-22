@@ -7,9 +7,8 @@
 //
 
 import XCTest
-@testable import LoginViper
 
-class LoginViperTests: XCTestCase {
+class LoginTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
